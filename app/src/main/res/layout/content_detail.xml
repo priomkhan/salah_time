@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="prayerTimeDetailsViewModel"
+            type="com.priomkhan.salahtime.ui.navigation.prayertime.details.PrayerTimeDetailsViewModel" />
+        <variable
+            name="item"
+            type="com.priomkhan.salahtime.localdata.PrayerTime" />
+        <variable
+            name="hijriDate"
+            type="String" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        tools:context=".ui.main.MainActivity"
+        tools:showIn="@layout/prayer_time_details_fragment">
+
+        <TextView
+            android:id="@+id/tvDate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:text="@{item.dateTime.date.toString()}"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@+id/tvHijriDate"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Today" />
+
+        <TextView
+            android:id="@+id/tvHijriDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:text="@{hijriDate}"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@+id/divider"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvDate"
+            tools:text="Hijri Date"/>
+
+        <TextView
+            android:id="@+id/tvLocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="10dp"
+            android:text="@{item.location.timezone}"
+            app:layout_constraintBottom_toTopOf="@+id/divider"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Location" />
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:background="@android:color/darker_gray"
+            app:layout_constraintBottom_toTopOf="@+id/fajr_alarm_image"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/tvDate"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvHijriDate" />
+
+        <ImageView
+            android:id="@+id/fajr_alarm_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:clickable="false"
+            android:src="@{item.fajr.getNotificationIcon(context)}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/divider"
+            app:tint="@color/colorPrimary"
+            tools:src="@drawable/ic_notification_on" />
+
+        <TextView
+            android:id="@+id/tvFajrHeader"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="@string/fajr"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/fajr_alarm_image"
+            tools:text="Fajr" />
+
+        <TextView
+            android:id="@+id/tvfajrTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:text="@{item.fajr.time}"
+            app:layout_constraintEnd_toStartOf="@+id/fajr_alarm_image"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toEndOf="@+id/tvFajrHeader"
+            app:layout_constraintTop_toTopOf="@+id/fajr_alarm_image" />
+
+        <ImageView
+            android:id="@+id/sunrise_alarm_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="16dp"
+            android:clickable="false"
+            android:src="@{item.sunrise.getNotificationIcon(context)}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fajr_alarm_image"
+            app:tint="@color/colorPrimary"
+            tools:src="@drawable/ic_notification_on" />
+
+        <TextView
+            android:id="@+id/tvSunriseHeader"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="@string/sunrise"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/sunrise_alarm_image"
+            tools:text="Sunrise" />
+
+        <TextView
+            android:id="@+id/tvSunriseTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:text="@{item.sunrise.time}"
+            app:layout_constraintEnd_toStartOf="@+id/sunrise_alarm_image"
+            app:layout_constraintHorizontal_bias="0.45"
+            app:layout_constraintStart_toEndOf="@+id/tvSunriseHeader"
+            app:layout_constraintTop_toTopOf="@+id/sunrise_alarm_image" />
+
+        <ImageView
+            android:id="@+id/dhuhr_alarm_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="16dp"
+            android:clickable="false"
+            android:src="@{item.dhuhr.getNotificationIcon(context)}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/sunrise_alarm_image"
+            app:tint="@color/colorPrimary"
+            tools:src="@drawable/ic_notification_on" />
+
+        <TextView
+            android:id="@+id/tvDhuhrHeader"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="@string/dhuhr"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/dhuhr_alarm_image"
+            tools:text="Dhuhr" />
+
+        <TextView
+            android:id="@+id/tvDhuhrTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:text="@{item.dhuhr.time}"
+            app:layout_constraintEnd_toStartOf="@+id/dhuhr_alarm_image"
+            app:layout_constraintHorizontal_bias="0.47"
+            app:layout_constraintStart_toEndOf="@+id/tvDhuhrHeader"
+            app:layout_constraintTop_toTopOf="@+id/dhuhr_alarm_image" />
+
+        <ImageView
+            android:id="@+id/asr_alarm_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="16dp"
+            android:clickable="false"
+            android:src="@{item.asr.getNotificationIcon(context)}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dhuhr_alarm_image"
+            app:tint="@color/colorPrimary"
+            tools:src="@drawable/ic_notification_on" />
+
+        <TextView
+            android:id="@+id/tvAsrHeader"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="@string/asr"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/asr_alarm_image"
+            tools:text="Asr" />
+
+        <TextView
+            android:id="@+id/tvAsrTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:text="@{item.asr.time}"
+            app:layout_constraintEnd_toStartOf="@+id/asr_alarm_image"
+            app:layout_constraintHorizontal_bias="0.501"
+            app:layout_constraintStart_toEndOf="@+id/tvAsrHeader"
+            app:layout_constraintTop_toTopOf="@+id/asr_alarm_image" />
+
+        <ImageView
+            android:id="@+id/maghrib_alarm_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="16dp"
+            android:clickable="false"
+            android:src="@{item.maghrib.getNotificationIcon(context)}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/asr_alarm_image"
+            app:tint="@color/colorPrimary"
+            tools:src="@drawable/ic_notification_on" />
+
+        <TextView
+            android:id="@+id/tvMaghribHeader"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="@string/maghrib"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/maghrib_alarm_image"
+            tools:text="Maghrib" />
+
+        <TextView
+            android:id="@+id/tvMaghribTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:text="@{item.maghrib.time}"
+            app:layout_constraintEnd_toStartOf="@+id/maghrib_alarm_image"
+            app:layout_constraintHorizontal_bias="0.437"
+            app:layout_constraintStart_toEndOf="@+id/tvMaghribHeader"
+            app:layout_constraintTop_toTopOf="@+id/maghrib_alarm_image" />
+
+        <ImageView
+            android:id="@+id/isha_alarm_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="16dp"
+            android:clickable="false"
+            android:src="@{item.isha.getNotificationIcon(context)}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/maghrib_alarm_image"
+            app:tint="@color/colorPrimary"
+            tools:src="@drawable/ic_notification_on" />
+
+        <TextView
+            android:id="@+id/tvIshaHeader"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="@string/isha"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/isha_alarm_image"
+            tools:text="Isha" />
+
+        <TextView
+            android:id="@+id/tvIshaTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="12dp"
+            android:text="@{item.isha.time}"
+            app:layout_constraintEnd_toStartOf="@+id/isha_alarm_image"
+            app:layout_constraintHorizontal_bias="0.485"
+            app:layout_constraintStart_toEndOf="@+id/tvIshaHeader"
+            app:layout_constraintTop_toTopOf="@+id/isha_alarm_image" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

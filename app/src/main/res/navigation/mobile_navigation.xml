@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/navigation_next_prayer">
+
+    <fragment
+        android:id="@+id/navigation_prayer_time"
+        android:name="com.priomkhan.salahtime.ui.navigation.prayertime.PrayerTimeFragment"
+        android:label="@string/title_monthly_prayer_time"
+        tools:layout="@layout/fragment_prayer_time" >
+        <action
+            android:id="@+id/action_navigation_prayer_time_to_prayerTimeDetailsFragment"
+            app:destination="@id/prayerTimeDetailsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_next_prayer"
+        android:name="com.priomkhan.salahtime.ui.navigation.nextprayer.NextPrayerFragment"
+        android:label="@string/title_next_prayer"
+        tools:layout="@layout/fragment_next_prayer" />
+
+    <fragment
+        android:id="@+id/qibla_compass"
+        android:name="com.priomkhan.salahtime.ui.navigation.qibla.QiblaFragment"
+        android:label="@string/title_qibla_compass"
+        tools:layout="@layout/fragment_qibla" />
+    <fragment
+        android:id="@+id/prayerTimeDetailsFragment"
+        android:name="com.priomkhan.salahtime.ui.navigation.prayertime.details.PrayerTimeDetailsFragment"
+        android:label="Details"
+        tools:layout="@layout/prayer_time_details_fragment" >
+        <argument
+            android:name="itemPrayerTime"
+            app:argType="com.priomkhan.salahtime.localdata.PrayerTime" />
+    </fragment>
+</navigation>

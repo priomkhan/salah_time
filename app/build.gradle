@@ -1,0 +1,106 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    id 'kotlin-kapt'
+    id 'kotlin-parcelize'
+    id 'androidx.navigation.safeargs'
+}
+
+android {
+    compileSdkVersion 30
+    buildToolsVersion "30.0.3"
+
+    defaultConfig {
+        applicationId "com.priomkhan.salahtime"
+        minSdkVersion 28
+        targetSdkVersion 30
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+
+    buildFeatures {
+        dataBinding true
+    }
+}
+
+dependencies {
+
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    implementation 'androidx.core:core-ktx:1.3.2'
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'com.google.android.material:material:1.3.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    implementation 'androidx.navigation:navigation-fragment-ktx:2.3.5'
+    implementation 'androidx.navigation:navigation-ui-ktx:2.3.5'
+    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.3.1'
+    implementation 'androidx.navigation:navigation-fragment-ktx:2.3.5'
+    implementation 'androidx.navigation:navigation-ui-ktx:2.3.5'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.preference:preference:1.1.1'
+    testImplementation 'junit:junit:4.+'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+
+    //Room
+    kapt 'androidx.room:room-compiler:2.2.6'
+    implementation 'androidx.room:room-runtime:2.2.6'
+    implementation 'androidx.room:room-ktx:2.2.6'
+
+    //Coroutine
+    implementation "androidx.lifecycle:lifecycle-extensions:2.2.0"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.1"
+
+    // logging
+    implementation 'com.jakewharton.timber:timber:4.7.1'
+
+    implementation 'androidx.recyclerview:recyclerview:1.2.0'
+
+    //Library to Parsing JSON using Moshi tool in Kotlin
+    def moshi_version = '1.9.2'
+    implementation "com.squareup.moshi:moshi-kotlin:$moshi_version"
+
+    //Retrofit is a type-safe HTTP client for Android and Java.
+    // With Retrofit we can compose the HTTP connection easily through
+    // a simple expressive interface just like an api document.
+    def retrofit2_version = '2.7.0'
+    implementation "com.squareup.retrofit2:retrofit:$retrofit2_version"
+
+    // Retrofit and Moshi work together really well. And the manual work we had to do
+    // of creating an adapter when I parsed JSON content will be done automatically by Retrofit.
+    implementation "com.squareup.retrofit2:converter-moshi:$retrofit2_version"
+
+    // Gson Converter
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+
+    //Swiperefreshlayout
+    implementation "androidx.swiperefreshlayout:swiperefreshlayout:1.1.0"
+
+    implementation 'com.batoulapps.adhan:adhan:1.2.1'
+
+    implementation 'com.google.android.material:material:1.3.0'
+
+    implementation 'com.google.firebase:firebase-firestore-ktx:22.1.2'
+
+    implementation 'com.google.android.gms:play-services-location:18.0.0'
+
+    implementation 'androidx.paging:paging-runtime-ktx:2.1.2'
+
+
+
+}

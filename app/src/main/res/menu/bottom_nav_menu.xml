@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_next_prayer"
+        android:icon="@drawable/ic_time_24"
+        android:title="@string/title_next_prayer" />
+
+    <item
+        android:id="@+id/navigation_prayer_time"
+        android:icon="@drawable/ic_list_view"
+        android:title="@string/title_monthly_prayer_time" />
+
+
+    <item
+        android:id="@+id/qibla_compass"
+        android:icon="@drawable/ic_qibla_compass"
+        android:title="@string/title_qibla_compass" />
+
+</menu>

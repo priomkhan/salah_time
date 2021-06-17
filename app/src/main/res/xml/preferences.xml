@@ -1,0 +1,128 @@
+<androidx.preference.PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <PreferenceCategory android:title="General Settings"
+        app:iconSpaceReserved="false">
+        <SwitchPreference
+            android:id="@+id/notification"
+            android:key="@string/pref_notification_key"
+            android:title="@string/pref_notification_title"
+            android:summary="@string/pref_notification_summary"
+            android:defaultValue="false"
+            app:iconSpaceReserved="false"/>
+        <ListPreference
+            android:dialogTitle="Select Standard Prayer time Calculation Method"
+            android:entries="@array/adhan_time_calculation_methods_entries"
+            android:entryValues="@array/adhan_time_calculation_methods_values"
+            android:key="@string/pref_adhan_calculation_method_key"
+            android:summary="@string/pref_adhan_calculation_method_summary"
+            android:title="@string/pref_adhan_calculation_method_title"
+            android:defaultValue="NORTH_AMERICA"
+            app:iconSpaceReserved="false"/>
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="Basic Settings"
+        app:iconSpaceReserved="false">
+        <PreferenceCategory android:title="Fajr"
+            app:iconSpaceReserved="false">
+            <SwitchPreference
+                android:id="@+id/notification_fajr"
+                android:key="@string/pref_fajr_notification_key"
+                android:title="@string/pref_fajr_notification_title"
+                android:summary="@string/pref_fajr_notification_summary"
+                android:defaultValue="false" />
+            <ListPreference
+                android:dialogTitle="Select duration"
+                android:entries="@array/time_adjust_entries"
+                android:entryValues="@array/time_adjust_values"
+                android:key="@string/pref_adjust_fajr_time_key"
+                android:summary="@string/pref_adjust_adhan_time_summary"
+                android:title="@string/pref_adjust_adhan_time_title"
+                android:defaultValue="0" />
+        </PreferenceCategory>
+
+        <PreferenceCategory android:title="Sunrise"
+            app:iconSpaceReserved="false">
+            <SwitchPreference
+                android:id="@+id/notification_sunrise"
+                android:key="@string/pref_sunrise_notification_key"
+                android:title="@string/pref_sunrise_notification_title"
+                android:summary="@string/pref_sunrise_notification_summary"
+                android:defaultValue="false" />
+        </PreferenceCategory>
+
+        <PreferenceCategory android:title="Dhuhr"
+            app:iconSpaceReserved="false">
+            <SwitchPreference
+                android:id="@+id/notification_dhuhr"
+                android:key="@string/pref_dhuhr_notification_key"
+                android:title="@string/pref_dhuhr_notification_title"
+                android:summary="@string/pref_dhuhr_notification_summary"
+                android:defaultValue="false" />
+            <ListPreference
+                android:dialogTitle="Select duration"
+                android:entries="@array/time_adjust_entries"
+                android:entryValues="@array/time_adjust_values"
+                android:key="@string/pref_adjust_dhuhr_time_key"
+                android:summary="@string/pref_adjust_adhan_time_summary"
+                android:title="@string/pref_adjust_adhan_time_title"
+                android:defaultValue="0" />
+        </PreferenceCategory>
+
+        <PreferenceCategory android:title="Asr"
+            app:iconSpaceReserved="false">
+            <SwitchPreference
+                android:id="@+id/notification_asr"
+                android:key="@string/pref_asr_notification_key"
+                android:title="@string/pref_asr_notification_title"
+                android:summary="@string/pref_asr_notification_summary"
+                android:defaultValue="false" />
+            <ListPreference
+                android:dialogTitle="Select duration"
+                android:entries="@array/time_adjust_entries"
+                android:entryValues="@array/time_adjust_values"
+                android:key="@string/pref_adjust_asr_time_key"
+                android:summary="@string/pref_adjust_adhan_time_summary"
+                android:title="@string/pref_adjust_adhan_time_title"
+                android:defaultValue="0" />
+        </PreferenceCategory>
+
+        <PreferenceCategory android:title="maghrib"
+            app:iconSpaceReserved="false">
+            <SwitchPreference
+                android:id="@+id/notification_maghrib"
+                android:key="@string/pref_maghrib_notification_key"
+                android:title="@string/pref_maghrib_notification_title"
+                android:summary="@string/pref_maghrib_notification_summary"
+                android:defaultValue="false"/>
+            <ListPreference
+                android:dialogTitle="Select duration"
+                android:entries="@array/time_adjust_entries"
+                android:entryValues="@array/time_adjust_values"
+                android:key="@string/pref_adjust_maghrib_time_key"
+                android:summary="@string/pref_adjust_adhan_time_summary"
+                android:title="@string/pref_adjust_adhan_time_title"
+                android:defaultValue="0"/>
+        </PreferenceCategory>
+
+        <PreferenceCategory android:title="Isha"
+            app:iconSpaceReserved="false">
+            <SwitchPreference
+                android:id="@+id/notification_isha"
+                android:key="@string/pref_isha_notification_key"
+                android:title="@string/pref_isha_notification_title"
+                android:summary="@string/pref_isha_notification_summary"
+                android:defaultValue="false"/>
+            <ListPreference
+                android:dialogTitle="Select duration"
+                android:entries="@array/time_adjust_entries"
+                android:entryValues="@array/time_adjust_values"
+                android:key="@string/pref_adjust_isha_time_key"
+                android:summary="@string/pref_adjust_adhan_time_summary"
+                android:title="@string/pref_adjust_adhan_time_title"
+                android:defaultValue="0"/>
+        </PreferenceCategory>
+
+    </PreferenceCategory>
+
+</androidx.preference.PreferenceScreen>

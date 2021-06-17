@@ -1,0 +1,141 @@
+<resources>
+    <string name="app_name">Salah Time</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_monthly_prayer_time">Calendar</string>
+    <string name="title_next_prayer">Next Prayer</string>
+    <string name="title_qibla_compass">Qibla</string>
+    <string name="edit_button_description">Edit Button</string>
+    <string name="today_text">Today (%1$s)</string>
+    <string name="time_to_pray">It is time for %1$s</string>
+    <string name="location_access_required">Location access is required to work PrayerTime properly.</string>
+    <string name="ok">OK</string>
+    <string name="location_permission_not_available">Location permission is not available. Location permission needed to run the app properly.</string>
+    <string name="location_permission_available">Location permission is available. Getting Location.</string>
+    <string name="location_permission_granted">Location permission was granted. Getting Location.</string>
+    <string name="location_permission_denied">Location permission request was denied.</string>
+    <string name="toolbar_image">Toolbar Image of a Man Praying.</string>
+    <string name="menu_action_settings">Settings</string>
+    <string name="menu_action_refresh">Refresh</string>
+    <string name="menu_action_save">Save</string>
+    <string name="fajr">Fajr</string>
+    <string name="sunrise">Sunrise</string>
+    <string name="dhuhr">Dhuhr</string>
+    <string name="asr">Asr</string>
+    <string name="maghrib">Maghrib</string>
+    <string name="isha">Isha</string>
+    <string name="title_activity_settings">Settings</string>
+
+    <!--Endless Service Info-->
+    <string name="endless_service_foreground_id" translatable="false">1206</string>
+    <string name="endless_service_notifications_channel_id" translatable="false">salah-time-endless-service-notifications-channel</string>
+    <string name="endless_service_notifications_channel_name">Salah Time Endless Service Notifications Channel</string>
+    <string name="endless_service_notifications_channel_description">Salah Time Endless Service Channel</string>
+    <string name="endless_service_notifications_content_title">Salah Time Alarm Service</string>
+    <string name="endless_service_notifications_content_text">Salah Time is working in background to work properly.</string>
+
+    <!--Alarm Service Info-->
+    <string name="alarm_service_foreground_service_id">1990</string>
+    <string name="alarm_service_notifications_channel_id" translatable="false">salah-time-alarm-service-notifications-channel</string>
+    <string name="alarm_service_notifications_channel_name">Salah Time Alarm Service Notifications Channel</string>
+    <string name="alarm_service_notifications_channel_description">Salah Time Alarm Service Channel</string>
+    <string name="alarm_service_notifications_content_title">Salah Time</string>
+    <string name="alarm_service_notifications_content_text">Time For %1$s.</string>
+    <string name="next_prayer_name">nextPrayerName</string>
+
+
+    <!-- Preference Titles -->
+    <string name="messages_header">Messages</string>
+    <string name="sync_header">Sync</string>
+
+    <!-- Messages Preferences -->
+    <string name="signature_title">Your signature</string>
+    <string name="reply_title">Default reply action</string>
+
+    <!-- Sync Preferences -->
+    <string name="sync_title">Sync email periodically</string>
+    <string name="attachment_title">Download incoming attachments</string>
+    <string name="attachment_summary_on">Automatically download attachments for incoming emails</string>
+    <string name="attachment_summary_off">Only download attachments when manually requested</string>
+
+    <!--Adhan Notification Preference-->
+    <string name="is_adhan_alarm_on">Notification</string>
+    <string name="is_fajr_adhan_alarm_on">Fajr Notification</string>
+    <string name="is_sunrise_alarm_on">Sunrise Notification</string>
+    <string name="is_dhuhr_adhan_alarm_on">Dhuhr Notification</string>
+    <string name="is_asr_adhan_alarm_on">Asr Notification</string>
+    <string name="is_maghrib_adhan_alarm_on">Maghrib Notification</string>
+    <string name="is_isha_adhan_alarm_on">Isha Notification</string>
+
+    <string name="pref_notification_key">Notification</string>
+    <string name="pref_notification_title">Notification</string>
+    <string name="pref_notification_summary">Praying time reminder</string>
+
+    <string name="pref_fajr_notification_key">Fajr Adhan</string>
+    <string name="pref_fajr_notification_title">Fajr Adhan</string>
+    <string name="pref_fajr_notification_summary">Fajr Reminder</string>
+
+    <string name="pref_sunrise_notification_key">Sunrise Notification</string>
+    <string name="pref_sunrise_notification_title">Sunrise Notification</string>
+    <string name="pref_sunrise_notification_summary">Sunrise Reminder</string>
+
+    <string name="pref_dhuhr_notification_key">Dhuhr Adhan</string>
+    <string name="pref_dhuhr_notification_title">Dhuhr Adhan</string>
+    <string name="pref_dhuhr_notification_summary">Dhuhr Reminder</string>
+
+    <string name="pref_asr_notification_key">Asr Adhan</string>
+    <string name="pref_asr_notification_title">Asr Adhan</string>
+    <string name="pref_asr_notification_summary">Asr Reminder</string>
+
+    <string name="pref_maghrib_notification_key">Maghrib Adhan</string>
+    <string name="pref_maghrib_notification_title">Maghrib Adhan</string>
+    <string name="pref_maghrib_notification_summary">Maghrib Reminder</string>
+
+    <string name="pref_isha_notification_key">Isha Adhan</string>
+    <string name="pref_isha_notification_title">Isha Adhan</string>
+    <string name="pref_isha_notification_summary">Isha Reminder</string>
+
+
+    <!--Location preferences-->
+    <string name="last_location_latitude">Latitude</string>
+    <string name="last_location_longitude">Longitude</string>
+    <string name="last_location_city_name">City Name</string>
+    <string name="last_location_state_name">State Name</string>
+    <string name="last_location_country_name">Country Name</string>
+    <!--Time Adjustment-->
+    <string name="pref_adjust_adhan_time_key">Adjust Adhan Time</string>
+    <string name="pref_adjust_fajr_time_key">Adjust Fajr Time</string>
+    <string name="pref_adjust_dhuhr_time_key">Adjust Dhuhr Time</string>
+    <string name="pref_adjust_asr_time_key">Adjust Asr Time</string>
+    <string name="pref_adjust_maghrib_time_key">Adjust maghrib Time</string>
+    <string name="pref_adjust_isha_time_key">Adjust Isha Time</string>
+    <string name="pref_adjust_adhan_time_summary">Click to show a list to choose from</string>
+    <string name="pref_adjust_adhan_time_title">Adjust Time</string>
+
+
+    <string name="adhan_time_adjustment">Adjust Adhan Time In Min</string>
+    <string name="fajr_time_adjustment">Adjust Fajr Time In Min</string>
+    <string name="dhuhr_time_adjustment">Adjust Dhuhr Time In Min</string>
+    <string name="asr_time_adjustment">Adjust Asr Time In Min</string>
+    <string name="maghrib_time_adjustment">Adjust Maghrib Time In Min</string>
+    <string name="isha_time_adjustment">Adjust Isha Time In Min</string>
+
+
+
+    <string name="adhan_time_calculation_method">Adhan Calculation Method</string>
+    <string name="pref_adhan_calculation_method_key">Adhan Calculation Method Key</string>
+    <string name="pref_adhan_calculation_method_summary">Click to show a list to choose from</string>
+    <string name="pref_adhan_calculation_method_title">Prayer Time Calculation Methods </string>
+    <string name="alarm_service_id">Alarm Service Id</string>
+
+    <!--Qibla Compass-->
+
+    <string name="device_current_orientation">%1$s &#xb0; </string>
+    <string name="qibla_direction_by_location">Approximate Qibla Direction in %1$s %2$s &#xb0; </string>
+    <string name="button_dismiss"> Mute </string>
+    <string name="compass_image_content_description">Compass Image</string>
+    <string name="txt_header_current_prayer">Last %1$s</string>
+    <string name="txt_header_next_prayer">Next %1$s</string>
+    <string name="location_logo_content_description">Location Logo</string>
+
+
+</resources>

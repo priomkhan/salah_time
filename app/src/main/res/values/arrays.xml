@@ -1,0 +1,62 @@
+<resources>
+    <!-- Adhan Calculation Method Preference -->
+    <string-array name="adhan_time_calculation_methods_entries">
+        <item>MUSLIM WORLD LEAGUE</item>
+        <item>EGYPTIAN</item>
+        <item>KARACHI</item>
+        <item>UMM AL QURA</item>
+        <item>DUBAI</item>
+        <item>MOON SIGHTING COMMITTEE</item>
+        <item>NORTH AMERICA</item>
+        <item>KUWAIT</item>
+        <item>QATAR</item>
+        <item>SINGAPORE</item>
+        <item>OTHER</item>
+    </string-array>
+
+    <string-array name="adhan_time_calculation_methods_values">
+        <item>MUSLIM_WORLD_LEAGUE</item>
+        <item>EGYPTIAN</item>
+        <item>KARACHI</item>
+        <item>UMM_AL_QURA</item>
+        <item>DUBAI</item>
+        <item>MOON_SIGHTING_COMMITTEE</item>
+        <item>NORTH_AMERICA</item>
+        <item>KUWAIT</item>
+        <item>QATAR</item>
+        <item>SINGAPORE</item>
+        <item>OTHER</item>
+    </string-array>
+
+    <!-- Adjust Time Preference -->
+    <string-array name="time_adjust_entries">
+        <item>-5 Min</item>
+        <item>-4 Min</item>
+        <item>-3 Min</item>
+        <item>-2 Min</item>
+        <item>-1 Min</item>
+        <item>Default</item>
+        <item>1 Min</item>
+        <item>2 Min</item>
+        <item>3 Min</item>
+        <item>4 Min</item>
+        <item>5 Min</item>
+
+    </string-array>
+
+    <string-array name="time_adjust_values">
+        <item>-5</item>
+        <item>-4</item>
+        <item>-3</item>
+        <item>-2</item>
+        <item>-1</item>
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+
+    </string-array>
+
+</resources>

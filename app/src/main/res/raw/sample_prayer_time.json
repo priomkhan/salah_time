@@ -1,0 +1,87 @@
+{
+  "code": 200,
+  "status": "OK",
+  "data": [
+    {
+      "timings": {
+        "Fajr": "05:38 (EDT)",
+        "Sunrise": "06:59 (EDT)",
+        "Dhuhr": "13:22 (EDT)",
+        "Asr": "16:57 (EDT)",
+        "Sunset": "19:45 (EDT)",
+        "Maghrib": "19:45 (EDT)",
+        "Isha": "21:07 (EDT)",
+        "Imsak": "05:28 (EDT)",
+        "Midnight": "01:22 (EDT)"
+      },
+      "date": {
+        "readable": "01 Apr 2021",
+        "timestamp": "1617282061",
+        "gregorian": {
+          "date": "01-04-2021",
+          "format": "DD-MM-YYYY",
+          "day": "01",
+          "weekday": {
+            "en": "Thursday"
+          },
+          "month": {
+            "number": 4,
+            "en": "April"
+          },
+          "year": "2021",
+          "designation": {
+            "abbreviated": "AD",
+            "expanded": "Anno Domini"
+          }
+        },
+        "hijri": {
+          "date": "18-08-1442",
+          "format": "DD-MM-YYYY",
+          "day": "18",
+          "weekday": {
+            "en": "Al Khamees",
+            "ar": "الخميس"
+          },
+          "month": {
+            "number": 8,
+            "en": "Shaʿbān",
+            "ar": "شَعْبان"
+          },
+          "year": "1442",
+          "designation": {
+            "abbreviated": "AH",
+            "expanded": "Anno Hegirae"
+          },
+          "holidays": []
+        }
+      },
+      "meta": {
+        "latitude": 43.7724382,
+        "longitude": -79.538909,
+        "timezone": "America/Toronto",
+        "method": {
+          "id": 2,
+          "name": "Islamic Society of North America (ISNA)",
+          "params": {
+            "Fajr": 15,
+            "Isha": 15
+          }
+        },
+        "latitudeAdjustmentMethod": "ANGLE_BASED",
+        "midnightMode": "STANDARD",
+        "school": "STANDARD",
+        "offset": {
+          "Imsak": 0,
+          "Fajr": 0,
+          "Sunrise": 0,
+          "Dhuhr": 0,
+          "Asr": 0,
+          "Maghrib": 0,
+          "Sunset": 0,
+          "Isha": 0,
+          "Midnight": 0
+        }
+      }
+    }
+  ]
+}
